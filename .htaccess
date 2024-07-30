@@ -1,0 +1,50 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on    
+    RewriteCond %{REQUEST_URI} !^public
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L] 
+
+</IfModule>
+#<IfModule mod_rewrite.c>
+#<IfModule mod_negotiation.c>
+#Options -MultiViews
+#</IfModule>
+
+#RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME} -d [OR]
+#RewriteCond %{REQUEST_FILENAME} -f
+#RewriteRule ^ ^$1 [N]
+
+#RewriteCond %{REQUEST_URI} (\.\w+$) [NC]
+#RewriteRule ^(.*)$ public/$1 
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^ server.php
+#</IfModule>
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP:X-Forwarded-SSL} !on
+#RewriteCond %{HTTP_HOST} ^reddocenteinnovador\.congresocied\.cl$ [OR]
+#RewriteCond %{HTTP_HOST} ^www\.reddocenteinnovador\.congresocied\.cl$
+#RewriteRule ^/?$ "https\:\/\/reddocenteinnovador\.congresocied\.cl\/" [R=301,L]
+
