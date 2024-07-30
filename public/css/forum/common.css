@@ -1,0 +1,1572 @@
+/* CSS Reset http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
+---------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+abbr {
+	text-decoration: none;
+}
+
+/* General Markup Styles
+---------------------------------------- */
+*,
+*:before,
+*:after {
+	border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+	/* Always show a scrollbar for short pages - stops the jump when the scrollbar appears. non-IE browsers */
+	height: 101%;
+}
+
+body {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	line-height: normal;
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word;
+	-webkit-print-color-adjust: exact;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+	/* Forum name */
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	margin-right: 200px;
+	margin-top: 0.9108em;
+	font-weight: normal;
+	font-size: 2.635em;
+}
+
+h2 {
+	/* Forum header titles */
+	font-family: "Trebuchet MS", Helvetica, Arial, Sans-serif;
+	font-weight: bold;
+	font-size: 2.246em;
+	margin: 0 0 33px;
+}
+
+h2.solo {
+	margin-bottom: 33px;
+}
+
+h3 {
+	/* Sub-headers (also used as post headers, but defined later) */
+	font-family: "Trebuchet MS", Helvetica, Arial, Sans-serif;
+	/*! font-weight: bold; */
+	/*! text-transform: uppercase; */
+	border-bottom: 1px solid transparent;
+	margin-bottom: 3px;
+	padding-bottom: 3px;
+	font-size: 1.56em;
+	margin-top: 26px;
+}
+
+h4 {
+	/* Forum and topic list titles */
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+}
+
+p {
+	line-height: 1.6154em;
+	font-size: 1.3em;
+	margin-bottom: 22px;
+}
+
+img {
+	border-width: 0;
+}
+
+hr {
+	border: 0 solid transparent;
+	border-top-width: 1px;
+	height: 1px;
+	margin: 16px 0;
+	display: block;
+	clear: both;
+}
+
+hr.dashed {
+	border-top-style: dashed;
+	margin: 11px 0;
+}
+
+hr.divider {
+	display: none;
+}
+
+p.right {
+	text-align: right;
+}
+
+p.time {
+	line-height: 16px;
+	margin-bottom: 16px;
+}
+
+p.jumpbox-return {
+	margin: 0;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+i, em {
+	font-style: italic;
+}
+
+u {
+	text-decoration: underline;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+li {
+	display: list-item;
+}
+
+ul ul, ol ul {
+	list-style-type: circle;
+}
+
+ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+	list-style-type: square;
+}
+
+
+/* Main blocks
+---------------------------------------- */
+#wrap {
+	margin: 0 auto;
+	max-width: 1300px;
+	min-width: 625px;
+	padding: 0 12px;
+}
+
+#wrap:before {
+    width: 100%;
+    height: 217px;
+    content: "";
+    background-image: url("/img/header-back.jpg");
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#page-header{
+	position: relative;
+	z-index: 1;
+}
+
+#page-body {
+	margin: 0;
+	clear: both;
+}
+
+#page-footer {
+	clear: both;
+	padding-top: 8px;
+}
+
+#page-footer h3 {
+	margin-top: 20px;
+}
+
+.logo {
+	float: left;
+	width: auto;
+	padding: 25px 24px 0 0;
+}
+
+.logo:hover {
+	text-decoration: none;
+}
+
+/* Site description and logo */
+#site-description {
+	float: left;
+	width: 65%;
+}
+
+#site-description h1 {
+	margin-right: 0;
+}
+
+#site-description p {
+	line-height: 18px;
+	margin-top: 3px;
+}
+
+/* Round cornered boxes and backgrounds
+---------------------------------------- */
+.headerbar {
+	background: transparent none repeat-x 0 0;
+	margin: 0;
+	padding: 21px 0 12px;
+	border-radius: 0;
+}
+
+.navbar {
+}
+
+#nav-main {
+	margin: 0 0 33px;
+	padding: 18px 22px 16px;
+	border: none;
+	border-radius: 2px;
+	border-bottom: 1px solid transparent;
+}
+
+@media only screen and (min-width: 1001px) {
+	.sidebar ~ .forabg {
+		clear: none;
+		margin-right: 250px;
+		overflow: hidden;
+	}
+
+	.sidebar {
+		float: right;
+		width: 237px;
+	}
+}
+
+.sidebar {
+	padding-bottom: 18px;
+	overflow: hidden;
+}
+
+.sidebar-block {
+	overflow: hidden;
+	width: 100%;
+}
+
+.sidebar-block > div {
+	line-height: 18px;
+	font-size: 1.3em;
+}
+
+#sidebar-recent-posts a {
+	font-weight: 700;
+}
+
+#sidebar-recent-posts > div {
+	display: block;
+}
+
+#sidebar-recent-posts > div + div {
+	margin-top: 12px;
+}
+
+.sidebar-recent-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.sidebar-recent-author {
+	opacity: 0.5;
+}
+
+.sidebar-recent-title,
+.sidebar-recent-author,
+.sidebar-recent-content {
+	display: block;
+	width: 100%;
+}
+
+#sidebar-recent-topics a {
+	font-weight: 700;
+}
+
+#sidebar-recent-topics > div + div {
+	margin-top: 12px;
+}
+
+.forabg {
+	background: transparent none repeat-x 0 0;
+	margin-bottom: 12px;
+	padding: 0;
+	clear: both;
+}
+
+.forabg + .forabg,
+.forabg + .forumbg {
+	margin-top: -1px;
+}
+
+.forumbg {
+	background: transparent none repeat-x 0 0;
+	margin-bottom: 11px;
+	padding: 0;
+	clear: both;
+}
+
+.panel {
+	margin-bottom: 18px;
+	padding: 0.1px 22px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+}
+
+.post {
+	padding: 10px 20px;
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	margin-bottom: 18px;
+	position: relative;
+	border: 1px solid transparent;
+	border-radius: 2px;
+}
+
+.divider + .post {
+	margin-top: -23px;
+	border-radius: 0 0 2px 2px;
+}
+
+.rowbg {
+	margin: 5px 5px 2px 5px;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 651px) {
+	.sidebar {
+		width: 100%;
+	}
+
+	.sidebar-block {
+		float: left;
+		width: 50%;
+	}
+
+	.sidebar-block:nth-child(even) {
+		padding-left: 18px;
+	}
+}
+
+/* Horizontal lists
+----------------------------------------*/
+.navbar ul.linklist {
+	margin-top: 50px;
+	margin-bottom: 2px;
+}
+
+#nav-footer {
+	margin-top: 0;
+}
+
+ul.linklist {
+	display: block;
+	margin: 0;
+}
+
+#cp-main .panel {
+	padding: 0 22px;
+}
+
+ul.linklist > li {
+	float: left;
+	font-size: 1.083em;
+	line-height: 2.2154em;
+	list-style-type: none;
+	margin-right: 22px;
+	padding-top: 1px;
+	width: auto;
+}
+
+ul.linklist > li.rightside, p.rightside, a.rightside {
+	float: right;
+	margin-right: 0;
+	margin-left: 22px;
+	text-align: right;
+}
+
+ul.navlinks {
+}
+
+ul.leftside {
+	float: left;
+	margin-left: 0;
+	margin-right: 5px;
+	text-align: left;
+}
+
+ul.rightside {
+	float: right;
+	margin-left: 5px;
+	margin-right: -5px;
+	text-align: right;
+}
+
+ul.linklist li.responsive-menu {
+	position: relative;
+	margin: 0 5px;
+}
+
+ul.linklist li.responsive-menu a.responsive-menu-link {
+	display: inline-block;
+	margin: 0 5px;
+	font-size: 1.455em;
+	position: relative;
+	width: 16px;
+	line-height: 1.2em;
+}
+
+ul.linklist li.responsive-menu a.responsive-menu-link:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 7px;
+	height: 10px;
+	width: 14px;
+	border-bottom: 2px solid transparent;
+	border-top: 6px double transparent;
+}
+
+.hasjs ul.linklist.leftside, .hasjs ul.linklist.rightside {
+	max-width: 48%;
+}
+
+.hasjs ul.linklist.fullwidth {
+	max-width: none;
+}
+
+li.responsive-menu.dropdown-right .dropdown {
+	left: -9px;
+}
+
+li.responsive-menu.dropdown-left .dropdown {
+	right: -6px;
+}
+
+ul.linklist .dropdown {
+	top: 22px;
+}
+
+ul.linklist .dropdown-up .dropdown {
+	bottom: 18px;
+	top: auto;
+}
+
+/* Bulletin icons for list items
+----------------------------------------*/
+ul.linklist.bulletin > li:before {
+	display: inline-block;
+	content: "\2022";
+	font-size: inherit;
+	line-height: inherit;
+	padding-right: 4px;
+}
+
+ul.linklist.bulletin > li:first-child:before,
+ul.linklist.bulletin > li.rightside:last-child:before {
+	content: none;
+}
+
+ul.linklist.bulletin > li.no-bulletin:before {
+	content: none;
+}
+
+.responsive-menu:before {
+	display: none !important;
+}
+
+.bulletin {
+	padding: 11px 22px;
+	border-bottom: 1px solid transparent;
+	border-radius: 2px;
+}
+
+/* Profile in overall_header.html */
+.header-profile {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.header-avatar:hover {
+	text-decoration: none;
+}
+
+.header-avatar:hover span {
+	text-decoration: underline;
+}
+
+.header-avatar img {
+	margin-bottom: 2px;
+	max-height: 20px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.header-avatar span:after {
+	content: '\25BC';
+	display: inline-block;
+	font-size: 9px;
+	float: right;
+	padding-left: 2px;
+	opacity: 0.7;
+}
+
+/* Dropdown menu
+----------------------------------------*/
+.dropdown-container {
+	position: relative;
+}
+
+.dropdown-container-right {
+	float: right;
+}
+
+.dropdown-container-left {
+	float: left;
+}
+
+.nojs .dropdown-container:hover .dropdown {
+	display: block !important;
+}
+
+.dropdown {
+	position: absolute;
+	left: 0;
+	top: 1.2em;
+	z-index: 2;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	padding: 9px 0 0;
+	margin-right: -500px;
+}
+
+.dropdown.live-search {
+	top: auto;
+}
+
+.dropdown-container.topic-tools {
+	float: left;
+}
+
+.dropdown-up .dropdown {
+	top: auto;
+	bottom: 1.2em;
+	padding: 0 0 9px;
+}
+
+.dropdown-left .dropdown, .nojs .rightside .dropdown {
+	left: auto;
+	right: 0;
+	margin-left: -500px;
+	margin-right: 0;
+}
+
+.dropdown-button-control .dropdown {
+	top: 24px;
+}
+
+.dropdown-button-control.dropdown-up .dropdown {
+	top: auto;
+	bottom: 24px;
+}
+
+.dropdown .pointer, .dropdown .pointer-inner {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top-width: 0;
+	border-bottom: 10px solid transparent;
+	border-left: 10px dashed transparent;
+	border-right: 10px dashed transparent;
+	-webkit-transform: rotate(360deg); /* better anti-aliasing in webkit */
+	display: block;
+}
+
+.dropdown-up .pointer, .dropdown-up .pointer-inner {
+	border-bottom-width: 0;
+	border-top: 10px solid transparent;
+}
+
+.dropdown .pointer {
+	right: auto;
+	left: 10px;
+	top: 0;
+	z-index: 3;
+}
+
+.dropdown-up .pointer {
+	bottom: 0;
+	top: auto;
+}
+
+.dropdown-left .dropdown .pointer, .nojs .rightside .dropdown .pointer {
+	left: auto;
+	right: 10px;
+}
+
+.dropdown .pointer-inner {
+	top: auto;
+	bottom: -11px;
+	left: -10px;
+}
+
+.dropdown-up .pointer-inner {
+	bottom: auto;
+	top: -11px;
+}
+
+.dropdown .dropdown-contents {
+	z-index: 2;
+	overflow: hidden;
+	overflow-y: auto;
+	border: 1px solid transparent;
+	padding: 11px 22px;
+	position: relative;
+	min-width: 40px;
+	max-height: 300px;
+	border-radius: 2px;
+}
+
+.dropdown li {
+	border-top: 1px dotted transparent;
+	float: none !important;
+	line-height: normal !important;
+	font-size: 1em !important;
+	list-style: none;
+	margin: 0;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.dropdown-contents > li {
+	padding-right: 15px;
+}
+
+.dropdown-nonscroll > li {
+	padding-right: 0;
+}
+
+.dropdown li:first-child, .dropdown li.separator + li, .dropdown li li {
+	border-top: 0;
+}
+
+.dropdown li li:first-child {
+	margin-top: 4px;
+}
+
+.dropdown li li:last-child {
+	padding-bottom: 0;
+}
+
+.dropdown li li {
+	border-top: 1px dotted transparent;
+	padding-left: 18px;
+}
+
+.wrap .dropdown li, .dropdown.wrap li, .dropdown-extended li {
+	white-space: normal;
+}
+
+.dropdown li.separator {
+	border-top: 1px solid transparent;
+	margin: 4px 0;
+	padding: 0;
+}
+
+.dropdown li.separator:first-child, .dropdown li.separator:last-child {
+	display: none !important;
+}
+
+/* Responsive breadcrumbs
+----------------------------------------*/
+#nav-breadcrumbs .breadcrumbs {
+	font-size: 1.3em;
+}
+
+.breadcrumbs .crumb {
+	float: left;
+	word-wrap: normal;
+}
+
+.breadcrumbs .crumb:before {
+	content: '\2044';
+	font-weight: bold;
+	padding: 0 7px;
+}
+
+.breadcrumbs .crumb:first-child:before {
+	content: none;
+}
+
+.breadcrumbs .crumb a {
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+	overflow: hidden;
+}
+
+.breadcrumbs.wrapped .crumb a { letter-spacing: -.3px; }
+.breadcrumbs.wrapped .crumb.wrapped-medium a { letter-spacing: -.4px; }
+.breadcrumbs.wrapped .crumb.wrapped-tiny a { letter-spacing: -.5px; }
+
+.breadcrumbs .crumb.wrapped-max a { max-width: 120px; }
+.breadcrumbs .crumb.wrapped-wide a { max-width: 100px; }
+.breadcrumbs .crumb.wrapped-medium a { max-width: 80px; }
+.breadcrumbs .crumb.wrapped-small a { max-width: 60px; }
+.breadcrumbs .crumb.wrapped-tiny a { max-width: 40px; }
+
+/* Table styles
+----------------------------------------*/
+table.table1 {
+	width: 100%;
+}
+
+#ucp-main table.table1 {
+	padding: 2px;
+}
+
+table.table1 thead th {
+	font-weight: normal;
+	line-height: 1.3em;
+	font-size: 1em;
+	padding: 15px 0 14px 22px;
+	border: 1px solid transparent;
+}
+
+table.table1 thead th:first-child {
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+table.table1 thead th:last-child {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	padding-right: 22px;
+}
+
+table.table1 thead th span {
+	padding-left: 7px;
+}
+
+table.table1 tbody:before {
+	line-height: 11px;
+	content: "\200C";
+	display: block;
+}
+
+table.table1 tbody tr {
+	border: none;
+	position: relative;
+}
+
+table.table1 tbody tr:first-child {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+table.table1 tbody tr:last-child {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+table.table1 tbody tr:first-child td:first-child {
+	border-top-left-radius: 2px;
+}
+
+table.table1 tbody tr:first-child td:last-child {
+	border-top-right-radius: 2px;
+}
+
+table.table1 tbody tr:last-child td:first-child {
+	border-bottom-left-radius: 2px;
+}
+
+table.table1 tbody tr:last-child td:last-child {
+	border-bottom-right-radius: 2px;
+}
+
+table.table1 td {
+	font-size: 1.1em;
+}
+
+table.table1 tbody td {
+	padding: 11px 0 11px 22px;
+}
+
+table.table1 tbody td:last-child {
+	padding-right: 22px;
+}
+
+table.table1 tbody th {
+	padding: 5px;
+	text-align: left;
+}
+
+/* Specific column styles */
+table.table1 .name		{ text-align: left; }
+table.table1 .center		{ text-align: center; }
+table.table1 .reportby	{ width: 15%; }
+table.table1 .posts		{ text-align: center; width: 7%; }
+table.table1 .joined	{ text-align: left; width: 15%; }
+table.table1 .active	{ text-align: left; width: 15%; }
+table.table1 .mark		{ text-align: center; width: 7%; }
+table.table1 .info		{ text-align: left; width: 30%; }
+table.table1 .info div	{ width: 100%; white-space: normal; overflow: hidden; }
+table.table1 .autocol	{ line-height: 2em; white-space: nowrap; }
+table.table1 thead .autocol { padding-left: 1em; }
+
+table.table1 span.rank-img {
+	float: right;
+	width: auto;
+}
+
+table.info td {
+	padding: 3px;
+}
+
+table.info tbody th {
+	padding: 3px;
+	text-align: right;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+.forumbg table.table1 {
+	margin: 0;
+}
+
+.forumbg-table > .inner {
+	margin: 0;
+}
+
+#color_palette_placeholder table {
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+
+/* Misc layout styles
+---------------------------------------- */
+/* column[1-2] styles are containers for two column layouts */
+.column1 {
+	float: left;
+	clear: left;
+	width: 49%;
+}
+
+.column2 {
+	float: right;
+	clear: right;
+	width: 49%;
+}
+
+/* General classes for placing floating blocks */
+.left-box {
+	float: left;
+	width: auto;
+	text-align: left;
+	max-width: 100%;
+	margin: 7px 0;
+}
+
+.left-box.profile-details {
+	width: 80%;
+}
+
+.right-box {
+	float: right;
+	width: auto;
+	text-align: right;
+	max-width: 100%;
+	margin: 7px 0;
+}
+
+h3 .left-box,
+h3 .right-box {
+	margin: 0;
+}
+
+dl.details {
+	/*font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;*/
+	font-size: 1.1em;
+	margin: 22px 0;
+}
+
+dl.details dt {
+	float: left;
+	clear: left;
+	width: 30%;
+	text-align: right;
+	display: block;
+}
+
+dl.details dd {
+	margin-left: 0;
+	padding-left: 5px;
+	margin-bottom: 5px;
+	width: 65%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.clearfix, ul.topiclist dl, dl.polls {
+	overflow: hidden;
+}
+
+fieldset.fields1 ul.recipients {
+	list-style-type: none;
+	line-height: 1.8;
+	max-height: 150px;
+	overflow-y: auto;
+}
+
+fieldset.fields1 dd.recipients {
+	clear: left;
+	margin-left: 1em;
+}
+
+fieldset.fields1 ul.recipients  input.button2{
+	font-size: 0.8em;
+	margin-right: 0;
+	padding: 0;
+}
+
+fieldset.fields1 dl.pmlist > dt {
+	width: auto !important;
+}
+
+fieldset.fields1 dl.pmlist dd.recipients {
+	margin-left: 0 !important;
+}
+
+/* Action-bars (container for post/reply buttons, pagination, etc.)
+---------------------------------------- */
+.action-bar {
+	font-size: 1.3em;
+	margin: 35px 0 19px;
+}
+
+.action-bar.bottom {
+	margin: 16px 0;
+}
+
+.forabg + .action-bar {
+	margin-top: 2em;
+}
+
+.section-index .action-bar {
+	margin-top: -10px;
+	margin-bottom: 16px;
+	float: right;
+	font-size: 1.3em;
+}
+
+.section-viewforum .action-bar {
+	margin-bottom: 16px;
+}
+
+/* Pagination
+---------------------------------------- */
+.pagination {
+	float: right;
+	text-align: right;
+	width: auto;
+	line-height: 36px;
+}
+
+.pagination > ul {
+	display: inline-block;
+	list-style: none !important;
+	margin-left: 5px;
+}
+
+.pagination > ul > li {
+	display: inline-block !important;
+	padding: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+.pagination li a, .pagination li span {
+	border-style: solid;
+	border-width: 0 0 2px;
+	display: block;
+	font-size: 10.83px;
+	font-weight: normal;
+	line-height: 29px;
+	min-width: 10px;
+	padding: 0 7px;
+	text-align: center;
+	text-decoration: none;
+	height: 29px;
+}
+
+.pagination li.ellipsis span {
+	border: none;
+	padding: 0;
+}
+
+.pagination li.active span {
+	font-weight: bold;
+}
+
+.pagination li.page-jump {
+	margin-right: 5px;
+}
+
+.pagination li.page-jump a, .pagination li.next a, .pagination li.previous a {
+	background-repeat: no-repeat;
+	font-size: 0;
+	width: 24px;
+}
+
+.pagination li.page-jump a {
+	background-position: center;
+	width: 24px;
+}
+
+.pagination li.next a {
+	background-position: center;
+}
+
+.pagination li.previous a {
+	background-position: center;
+}
+
+.pagination li.page-jump a:hover, .pagination .dropdown-visible a.dropdown-trigger, .nojs .pagination .dropdown-container:hover a.dropdown-trigger { background-position:center; }
+.pagination li.next a:hover { background-position: center; }
+.pagination li.previous a:hover { background-position: center; }
+
+/* Pagination in viewforum for multipage topics */
+.row .pagination {
+	display: block;
+	margin-top: 0;
+	padding: 0 0 0 7px;
+	font-size: 10px;
+	line-height: 1;
+	margin-top: -2px;
+}
+
+.row .pagination > ul {
+	margin: 0;
+}
+
+.row .pagination > ul > li {
+	float: left;
+}
+
+.row .pagination li a, .row .pagination li span {
+	padding: 0 4px;
+	border: none;
+	line-height: 18px;
+	height: auto;
+}
+
+.row .pagination li:first-child a,
+.row .pagination li:first-child span {
+	border-radius: 2px 0 0 2px;
+}
+
+.row .pagination li:last-child a,
+.row .pagination li:last-child span {
+	border-radius: 0 2px 2px 0;
+}
+
+.row .left-box {
+	margin: 0;
+}
+
+/* jQuery popups
+---------------------------------------- */
+.phpbb_alert {
+	border: 1px solid transparent;
+	display: none;
+	left: 0;
+	padding: 0 25px 20px 25px;
+	position: fixed;
+	right: 0;
+	top: 150px;
+	z-index: 50;
+	width: 620px;
+	margin: 0 auto;
+}
+
+@media only screen and (max-height: 500px), only screen and (max-device-width: 500px)
+{
+	.phpbb_alert {
+		top: 25px;
+	}
+}
+
+.phpbb_alert .alert_close {
+	display: block;
+	float: right;
+	width: 18px;
+	height: 18px;
+	overflow: hidden;
+	text-decoration: none !important;
+	background: transparent none 0 0 no-repeat;
+	margin-top: 0;
+	margin-right: -22px;
+}
+
+.phpbb_alert p {
+	margin: 8px 0;
+	padding-bottom: 8px;
+}
+
+.phpbb_alert label {
+	display: block;
+	margin: 8px 0;
+	padding-bottom: 8px;
+}
+
+.phpbb_alert div.alert_text > p,
+.phpbb_alert div.alert_text > label,
+.phpbb_alert div.alert_text > select,
+.phpbb_alert div.alert_text > textarea,
+.phpbb_alert div.alert_text > input {
+	font-size: 1.1em;
+}
+
+#darkenwrapper {
+	display: none;
+	position: relative;
+	z-index: 44;
+}
+
+#darken {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	z-index: 45;
+}
+
+#loading_indicator {
+	background: center center no-repeat;
+	border-radius: 5px;
+	display: none;
+	opacity: 0.8;
+	margin-top: -50px;
+	margin-left: -50px;
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: 51;
+}
+
+/* Miscellaneous styles
+---------------------------------------- */
+#forum-permissions {
+	float: right;
+	width: auto;
+	padding-left: 5px;
+	margin-left: 5px;
+	margin-top: 10px;
+	text-align: right;
+}
+
+.copyright {
+	padding: 13px 0 18px;
+	text-align: center;
+	font-size: 1.083em;
+	line-height: 1.7754em;
+}
+
+.copyright strong {
+	font-weight: normal;
+}
+
+.small {
+	font-size: 0.9em !important;
+}
+
+.titlespace {
+	margin-bottom: 33px;
+}
+
+.headerspace {
+	margin-top: 20px;
+}
+
+.error {
+	font-weight: bold;
+	font-size: 1em;
+}
+
+div.rules {
+	margin: -10px 0 -15px;
+	font-size: 1.3em;
+	padding: 19px 22px;
+	border-radius: 2px;
+	line-height: 1.6154em;
+}
+
+div.rules + .forabg,
+div.rules + .forumbg {
+	margin-top: 43px;
+}
+
+div.rules ul, div.rules ol {
+	margin-left: 20px;
+}
+
+p.post-notice {
+	position: relative;
+	padding: 11px;
+	padding-left: 46px;
+	min-height: 14px;
+	margin: 22px;
+	border: 3px solid transparent;
+}
+
+p.post-notice:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 11px;
+	width: 24px;
+	background: transparent none 50% 50% no-repeat;
+	pointer-events: none;
+}
+
+form > p.post-notice strong {
+	line-height: 20px;
+}
+
+#jumpbox {
+	margin: 0 0 20px;
+}
+
+.stat-block {
+	clear: both;
+}
+
+.section-index .stat-block h3 {
+	margin-top: 13px;
+}
+
+.section-index .stat-block {
+	clear: none;
+	float: left;
+}
+
+.section-index .online-list {
+	width: 50%;
+	padding-right: 11px;
+}
+
+.section-index .birthday-list {
+	padding-left: 11px;
+	padding-right: 11px;
+	width: 25%;
+}
+
+.section-index .statistics {
+	padding-left: 11px;
+	width: 25%;
+}
+
+#top {
+	position: absolute;
+	top: -20px;
+}
+
+.clear {
+	display: block;
+	clear: both;
+	font-size: 1px;
+	line-height: 1px;
+	background: transparent;
+}
+
+/* Inner box-model clearing */
+.inner:after,
+ul.linklist:after,
+.action-bar:after,
+.notification_text:after,
+.tabs-container:after,
+#tabs > ul:after,
+#minitabs > ul:after,
+.postprofile .avatar-container:after,
+#page-body:after {
+	clear: both;
+	content: '';
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+.smilies {
+	vertical-align: text-bottom;
+}
+
+.icon-notification {
+	position: relative;
+}
+
+.member-search {
+	float: left;
+	margin: 0;
+	padding: 6px 10px;
+}
+
+.member-search strong {
+	font-size: 0.95em;
+}
+
+.dropdown-extended {
+	display: none;
+	z-index: 1;
+}
+
+.dropdown-extended ul {
+	max-height: 350px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	clear: both;
+}
+
+.dropdown-extended ul li {
+	padding: 0;
+	margin: 0 !important;
+	float: none;
+	border-top: 1px solid;
+	list-style-type: none;
+	font-size: 0.95em;
+	clear: both;
+	position: relative;
+}
+
+.dropdown-extended ul li:first-child {
+	border-top: none;
+}
+
+.dropdown-extended ul li.no_notifications {
+	padding: 10px;
+}
+
+.dropdown-extended .dropdown-contents {
+	max-height: none;
+	padding: 0;
+	position: absolute;
+	width: 340px;
+}
+
+.nojs .dropdown-extended .dropdown-contents {
+	position: relative;
+}
+
+.dropdown-extended .header {
+	padding: 0 22px;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-align: left;
+	line-height: 44px;
+	border-bottom: 1px solid;
+	border-radius: 2px 2px 0 0;
+}
+
+.dropdown-extended .header .header_settings {
+	float: right;
+	font-weight: normal;
+	text-transform: none;
+}
+
+.dropdown-extended .header:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.dropdown-extended .footer {
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.dropdown-extended ul li a, .dropdown-extended ul li.no-url {
+	padding: 16px 22px;
+}
+
+.dropdown-extended .footer > a {
+	padding: 11px 0;
+}
+
+.dropdown-extended ul li a, .notification_list dt > a, .dropdown-extended .footer > a {
+	display: block;
+	text-decoration: none;
+}
+
+.notification_list ul li img {
+	float: left;
+	max-height: 20px;
+	max-width: 20px;
+	width: auto !important;
+	height: auto !important;
+	margin-right: 7px;
+}
+
+.notification_list ul li p {
+	margin-bottom: 4px;
+	font-size: 1em;
+}
+
+.notification_list p.notification-reference,
+.notification_list p.notification-location,
+.notification_list li a p.notification-reason {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.notification_list p.notification-time {
+	font-size: 0.9em;
+	margin: 0;
+	text-align: right;
+}
+
+.notification_list div.notifications {
+	margin-left: 50px;
+	padding: 5px;
+}
+
+.notification_list div.notifications a {
+	display: block;
+}
+
+.notification_list p.notifications_title {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1.2em !important;
+}
+
+.notification_list p.notifications_title strong {
+	font-weight: bold;
+}
+
+.notification_list p.notifications_time {
+	font-size: 0.9em !important;
+}
+
+.notification_text {
+	margin-left: 0;
+}
+
+/* Navbar specific list items
+----------------------------------------*/
+
+#quick-links {
+	margin: 0 22px 0 0;
+}
+
+#quick-links a.responsive-menu-link {
+	display: block;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	width: auto;
+}
+
+#quick-links a.responsive-menu-link:before {
+	font-size: 1.455em;
+	line-height: 16.5px;
+}
+
+.compact #quick-links a.responsive-menu-link {
+	width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.compact .icon-notification > a > span, .compact .icon-pm > a > span {
+	display: none;
+}
+
+.compact .icon-notification > a > strong, .compact .icon-pm > a > strong {
+	padding-left: 2px;
+}
+
+.dropdown-page-jump .dropdown {
+	top: 20px;
+}
+
+.dropdown-page-jump.dropdown-up .dropdown {
+	bottom: 20px;
+}
+
+.dropdown-page-jump input.tiny {
+	width: 50px;
+}
+
+.dropdown .clone.hidden + li.separator {
+	display: none;
+}
+
+.dropdown .clone.hidden + li {
+	border-top: none;
+}
