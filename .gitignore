@@ -2,4 +2,4 @@
 .env_old
 screens/
 stubs/
-
+node_modules
